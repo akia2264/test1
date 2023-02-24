@@ -1,0 +1,3 @@
+[build]
+  command = "python traitement.py && hugo"
+  publish = "public"
