@@ -1,3 +1,18 @@
 [build]
-  command = "python traitement.py && hugo"
-  publish = "public"
+  command = "python traitement.py"
+  publish = "/"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+
+[[headers]]
+  for = "/*.py"
+  [headers.values]
+    Content-Type = "text/x-python; charset=utf-8"
